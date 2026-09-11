@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Drafter – Mahareza Firdaus | Drafter</title>
+  <meta name="description" content="Portofolio Mahareza Firdaus - Drafter." />
+  <meta name="keywords" content="drafter, arsitektur, teknik, AutoCAD, SketchUp, portofolio, Mahareza Firdaus" />
+
+  <!-- Tailwind CSS v4 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-black-bg: #09090b;
+      --color-black-card: #121215;
+      --color-black-border: #27272a;
+      --font-sans: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+  </style>
+
+  <style>
+    /* === Base & Scrollbar === */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #3f3f46 #09090b;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #09090b;
+      color: #a1a1aa;
+    }
+
+    /* === Monochrome Grid Background === */
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* === Card border & hover === */
+    .mono-card {
+      border: 1px solid #27272a;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mono-card:hover {
+      border-color: #71717a;
+      transform: translateY(-4px);
+    }
+
+    /* === Timeline === */
+    .timeline-line {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, #ffffff, #27272a);
+    }
+
+    @media (min-width: 768px) {
+      .timeline-line {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .timeline-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #09090b;
+      border: 2px solid #ffffff;
+      position: absolute;
+      left: 15px;
+      top: 24px;
+      z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+      .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    /* === Nav Link Active === */
+    .nav-link {
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #ffffff;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    /* === Scroll Reveal Animation === */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* === Skill Bar === */
+    .skill-bar-fill {
+      transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 0;
+    }
+
+    .skill-bar-fill.animated {
+      width: var(--bar-width);
+    }
+
+    /* === Mobile menu === */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    .section-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: #52525b;
+    }
+  </style>
+</head>
+
+<body class="grid-bg antialiased text-zinc-400 bg-zinc-950">
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-zinc-800/50 bg-zinc-950/80 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <div
+            class="w-7 h-7 border border-zinc-600 rounded flex items-center justify-center group-hover:border-white transition-colors">
+            <span class="text-white text-xs font-mono font-bold">MF</span>
+          </div>
+          <span class="text-white font-semibold text-xs tracking-widest uppercase hidden sm:inline">MAHAREZA
+            FIRDAUS<span class="text-zinc-500">.</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#profil"
+            class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Profil</a>
+          <a href="#pengalaman"
+            class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Pengalaman</a>
+          <a href="#skills"
+            class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Skills</a>
+          <a href="#sertifikasi"
+            class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Sertifikasi</a>
+          <a href="#projects"
+            class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Projects</a>
+          <a href="#kontak"
+            class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Kontak</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuToggle"
+          class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
+          aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu"
+    class="mobile-menu fixed inset-0 z-40 bg-zinc-950/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+    <a href="#profil"
+      class="mobile-nav-link text-xl text-zinc-300 hover:text-white font-mono uppercase tracking-widest">Profil</a>
+    <a href="#pengalaman"
+      class="mobile-nav-link text-xl text-zinc-300 hover:text-white font-mono uppercase tracking-widest">Pengalaman</a>
+    <a href="#skills"
+      class="mobile-nav-link text-xl text-zinc-300 hover:text-white font-mono uppercase tracking-widest">Skills</a>
+    <a href="#sertifikasi"
+      class="mobile-nav-link text-xl text-zinc-300 hover:text-white font-mono uppercase tracking-widest">Sertifikasi</a>
+    <a href="#projects"
+      class="mobile-nav-link text-xl text-zinc-300 hover:text-white font-mono uppercase tracking-widest">Projects</a>
+    <a href="#kontak"
+      class="mobile-nav-link text-xl text-zinc-300 hover:text-white font-mono uppercase tracking-widest">Kontak</a>
+  </div>
+
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center px-4 pt-16">
+    <div class="text-center relative z-10 max-w-4xl mx-auto">
+      <div class="section-number mb-4">// PORTOFOLIO DRAFTER</div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
+        MAHAREZA FIRDAUS
+      </h1>
+
+      <div class="h-px w-24 bg-zinc-700 mx-auto mb-6"></div>
+
+      <p class="text-base sm:text-lg md:text-xl text-zinc-400 font-mono tracking-wider uppercase mb-8">
+        Drafter
+      </p>
+
+      <div class="flex items-center justify-center gap-4">
+        <a href="#projects"
+          class="px-6 py-3 border border-white text-white text-xs font-mono tracking-widest uppercase hover:bg-white hover:text-black transition-all">Lihat
+          Project</a>
+        <a href="#kontak"
+          class="px-6 py-3 border border-zinc-700 text-zinc-400 text-xs font-mono tracking-widest uppercase hover:border-zinc-400 hover:text-white transition-all">Kontak</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PROFIL / TENTANG SAYA ========== -->
+  <section id="profil" class="py-24 px-4 border-t border-zinc-900">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal mb-12">
+        <div class="section-number mb-2">// 01. PROFIL</div>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">TENTANG SAYA</h2>
+      </div>
+
+      <div class="reveal">
+        <div class="mono-card rounded-lg bg-zinc-900/40 p-6 md:p-8">
+          <p class="text-zinc-300 leading-relaxed text-base md:text-lg font-light">
+            Saya merupakan Lulusan Desain Pemodelan dan Informasi Bangunan (DPIB) SMKN 7 Baleendah (2021). Berpengalaman
+            sebagai Drafter di konsultan bangunan (PT. Konars RWX MISSION, PT. Skala Delapan Konsultan, PT. Baladewa
+            Cipta
+            Kreasi, CV. Sasana Karya) dan Inspektur Quality di PT Astra Daihatsu Motor. Cepat belajar, adaptif, serta
+            mahir mengoperasikan software AutoCAD, SketchUp, SketchUp LayOut, dan Microsoft Office.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PENGALAMAN KERJA (TIMELINE) ========== -->
+  <section id="pengalaman" class="py-24 px-4 border-t border-zinc-900 bg-zinc-950/50">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal mb-16">
+        <div class="section-number mb-2">// 02. PENGALAMAN</div>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">PENGALAMAN KERJA</h2>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <div class="timeline-line"></div>
+
+        <!-- Item 1 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="hidden md:block"></div>
+          <div class="md:pl-10">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Drafter Arsitektural</h3>
+              <p class="text-zinc-400 text-xs mt-1">PT. Konars RWX MISSION, Bandung</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Feb
+                2026 – Sep 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="md:text-right md:pr-10 md:order-1">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Drafter</h3>
+              <p class="text-zinc-400 text-xs mt-1">PT. Skala Delapan Konsultan, Bandung</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Jul
+                2025 – Jan 2026</span>
+            </div>
+          </div>
+          <div class="hidden md:block md:order-2"></div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="hidden md:block"></div>
+          <div class="md:pl-10">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Drafter</h3>
+              <p class="text-zinc-400 text-xs mt-1">PT. Baladewa Cipta Kreasi, Bandung</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Jan
+                2025 – Jun 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="md:text-right md:pr-10 md:order-1">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Drafter</h3>
+              <p class="text-zinc-400 text-xs mt-1">CV. Sasana Karya, Bandung</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Des
+                2023 – Des 2024</span>
+            </div>
+          </div>
+          <div class="hidden md:block md:order-2"></div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="hidden md:block"></div>
+          <div class="md:pl-10">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Quality Dom Running</h3>
+              <p class="text-zinc-400 text-xs mt-1">PT. Astra Daihatsu Motor, Jakarta</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Mei
+                2023 – Nov 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="md:text-right md:pr-10 md:order-1">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Quality Inspection Painting</h3>
+              <p class="text-zinc-400 text-xs mt-1">PT. Astra Daihatsu Motor, Jakarta</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Des
+                2021 – Mei 2023</span>
+            </div>
+          </div>
+          <div class="hidden md:block md:order-2"></div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="hidden md:block"></div>
+          <div class="md:pl-10">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Tim Distribusi</h3>
+              <p class="text-zinc-400 text-xs mt-1">Warehouse GeoffMax, Bandung</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Jun
+                2021 – Nov 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="reveal relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-8 mb-10">
+          <div class="timeline-dot"></div>
+          <div class="md:text-right md:pr-10 md:order-1">
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5">
+              <h3 class="text-white font-semibold text-sm tracking-wide">Drafter Magang</h3>
+              <p class="text-zinc-400 text-xs mt-1">CV. Sasana Karya, Bandung</p>
+              <span
+                class="inline-block text-zinc-500 text-xs font-mono mt-2 pt-2 border-t border-zinc-800/80 w-full">Jan
+                2020 – Mar 2020</span>
+            </div>
+          </div>
+          <div class="hidden md:block md:order-2"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== KETERAMPILAN / SKILLS ========== -->
+  <section id="skills" class="py-24 px-4 border-t border-zinc-900">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal mb-12">
+        <div class="section-number mb-2">// 03. SKILLS</div>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">KETERAMPILAN</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Software Skills -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 p-6 h-full">
+            <h3 class="text-white font-mono text-sm uppercase tracking-widest mb-6 pb-2 border-b border-zinc-800">
+              Software Skills</h3>
+
+            <div class="grid grid-cols-1 gap-3">
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">AutoCAD</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Pembuatan gambar kerja 2D & detail teknis</p>
+              </div>
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">SketchUp</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Pemodelan 3D arsitektur & eksterior/interior</p>
+              </div>
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">SketchUp LayOut</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Pembuatan gambar kerja 2D dari model 3D SketchUp</p>
+              </div>
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">Microsoft Office</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Dokumentasi data, laporan teknis & administrasi</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 p-6 h-full">
+            <h3 class="text-white font-mono text-sm uppercase tracking-widest mb-6 pb-2 border-b border-zinc-800">Soft
+              Skills</h3>
+
+            <div class="grid grid-cols-1 gap-3">
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">Cepat Belajar</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Adaptasi cepat terhadap sistem dan software baru</p>
+              </div>
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">Adaptif</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Fleksibel di berbagai lingkungan kerja</p>
+              </div>
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">Komunikasi Tim</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Kolaborasi efektif dengan arsitek, engineer & tim teknis</p>
+              </div>
+              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
+                <div class="text-white text-xs font-semibold font-mono">Pengawasan Detail (Quality Control)</div>
+                <p class="text-zinc-500 text-[11px] mt-0.5">Presisi tinggi dalam gambar kerja dan kualitas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SERTIFIKASI ========== -->
+  <section id="sertifikasi" class="py-24 px-4 border-t border-zinc-900 bg-zinc-950/50">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal mb-12">
+        <div class="section-number mb-2">// 04. SERTIFIKASI</div>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">SERTIFIKASI & PENGHARGAAN</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">BNSP • 2024</span>
+              <h3 class="text-white font-medium text-sm mt-1">Keselamatan dan Kesehatan Kerja Operator K3 Umum</h3>
+            </div>
+            <p class="text-zinc-500 text-xs mt-3">Badan Nasional Sertifikasi Profesi</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">HSP ACADEMY • 2024</span>
+              <h3 class="text-white font-medium text-sm mt-1">Training Operator K3 Umum</h3>
+            </div>
+            <p class="text-zinc-500 text-xs mt-3">HSP Academy</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">BNSP • 2023</span>
+              <h3 class="text-white font-medium text-sm mt-1">Sertifikat Kompetensi Jasa Konstruksi</h3>
+            </div>
+            <p class="text-zinc-500 text-xs mt-3">Badan Nasional Sertifikasi Profesi</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">ADM • 2023</span>
+              <h3 class="text-white font-medium text-sm mt-1">Best Employee & Appreciation Detection Defect</h3>
+            </div>
+            <p class="text-zinc-500 text-xs mt-3">PT Astra Daihatsu Motor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="py-24 px-4 border-t border-zinc-900">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal mb-12">
+        <div class="section-number mb-2">// 05. PROJECTS</div>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">GALERI PROJECT</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project Card 1 -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
+                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-sm">Rumah Tinggal 2 Lantai</h3>
+                <p class="text-zinc-500 text-xs mt-1">Gambar kerja lengkap arsitektur</p>
+                <div class="flex gap-2 mt-3">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button
+                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
+                Lihat Detail / Gambar Kerja
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
+                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-sm">Bangunan Komersial</h3>
+                <p class="text-zinc-500 text-xs mt-1">Desain dan detail teknis</p>
+                <div class="flex gap-2 mt-3">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">LayOut</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button
+                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
+                Lihat Detail / Gambar Kerja
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
+                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-sm">Renovasi Bangunan</h3>
+                <p class="text-zinc-500 text-xs mt-1">Perencanaan renovasi & as-built</p>
+                <div class="flex gap-2 mt-3">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">LayOut</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button
+                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
+                Lihat Detail / Gambar Kerja
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
+                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-sm">Denah Struktur</h3>
+                <p class="text-zinc-500 text-xs mt-1">Detail teknis dan struktur</p>
+                <div class="flex gap-2 mt-3">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button
+                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
+                Lihat Detail / Gambar Kerja
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
+                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-sm">Interior Design</h3>
+                <p class="text-zinc-500 text-xs mt-1">3D modeling & gambar kerja</p>
+                <div class="flex gap-2 mt-3">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button
+                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
+                Lihat Detail / Gambar Kerja
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 6 -->
+        <div class="reveal">
+          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+            <div>
+              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
+                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-white font-semibold text-sm">Site Plan & Master Plan</h3>
+                <p class="text-zinc-500 text-xs mt-1">Perencanaan tata letak lahan</p>
+                <div class="flex gap-2 mt-3">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-5 pt-0">
+              <button
+                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
+                Lihat Detail / Gambar Kerja
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== KONTAK / FOOTER ========== -->
+  <section id="kontak" class="py-24 px-4 border-t border-zinc-900 bg-zinc-950/50">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="reveal mb-12">
+        <div class="section-number mb-2">// 06. KONTAK</div>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">HUBUNGI SAYA</h2>
+      </div>
+
+      <div class="reveal flex flex-wrap items-center justify-center gap-6">
+        <!-- Email -->
+        <a href="https://mail.google.com/mail/u/0/?fs=1&to=maharfrds@gmail.com&tf=cm" target="_blank"
+          rel="noopener noreferrer"
+          class="mono-card rounded-lg bg-zinc-900/40 p-6 flex flex-col items-center gap-3 w-36 sm:w-44 group hover:bg-white hover:text-black transition-all duration-300">
+          <svg class="w-6 h-6 text-zinc-400 group-hover:text-black transition-colors" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-zinc-300 group-hover:text-black transition-colors">Email</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6289526766115" target="_blank" rel="noopener noreferrer"
+          class="mono-card rounded-lg bg-zinc-900/40 p-6 flex flex-col items-center gap-3 w-36 sm:w-44 group hover:bg-white hover:text-black transition-all duration-300">
+          <svg class="w-6 h-6 text-zinc-400 group-hover:text-black transition-colors" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-zinc-300 group-hover:text-black transition-colors">WhatsApp</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/mahareza-firdaus" target="_blank" rel="noopener noreferrer"
+          class="mono-card rounded-lg bg-zinc-900/40 p-6 flex flex-col items-center gap-3 w-36 sm:w-44 group hover:bg-white hover:text-black transition-all duration-300">
+          <svg class="w-6 h-6 text-zinc-400 group-hover:text-black transition-colors" fill="currentColor"
+            viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span
+            class="text-xs font-mono uppercase tracking-widest text-zinc-300 group-hover:text-black transition-colors">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Bottom -->
+  <footer class="border-t border-zinc-900 py-8 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-zinc-600 text-xs font-mono">
+        &copy; 2026 Mahareza Firdaus-Drafter.
+      </p>
+      <p class="text-zinc-600 text-xs font-mono uppercase tracking-wider">
+        Drafter
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // === Mobile menu toggle ===
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    let menuOpen = false;
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('open', menuOpen);
+      menuIcon.setAttribute('d', menuOpen
+        ? 'M6 18L18 6M6 6l12 12'
+        : 'M4 6h16M4 12h16M4 18h16'
+      );
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+        menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+      });
+    });
+
+    // === Scroll reveal ===
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // === Skill bar animation ===
+    const skillBars = document.querySelectorAll('.skill-bar-fill');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    skillBars.forEach(bar => skillObserver.observe(bar));
+
+    // === Active nav link ===
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
