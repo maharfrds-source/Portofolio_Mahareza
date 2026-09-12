@@ -344,13 +344,15 @@
       color: #09090b !important;
     }
 
-    html.light #projects button {
+    html.light #projects button,
+    html.light #projects a.inline-flex {
       background-color: #ffffff !important;
       color: #18181b !important;
       border-color: #d4d4d8 !important;
     }
 
-    html.light #projects button:hover {
+    html.light #projects button:hover,
+    html.light #projects a.inline-flex:hover {
       background-color: #09090b !important;
       color: #ffffff !important;
       border-color: #09090b !important;
@@ -365,10 +367,28 @@
       color: #71717a !important;
     }
 
-    html.light #projects .p-5 .flex.gap-2 span {
+    html.light #projects .p-5 .flex.flex-wrap span {
       background-color: #f4f4f5 !important;
       border-color: #e4e4e7 !important;
       color: #52525b !important;
+    }
+
+    html.light .gdrive-btn {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+      border-color: #09090b !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    html.light .gdrive-btn:hover {
+      background-color: #27272a !important;
+      border-color: #27272a !important;
+      color: #ffffff !important;
+    }
+
+    html.light .gdrive-btn svg,
+    html.light .gdrive-btn span {
+      color: #ffffff !important;
     }
 
     html.light #sertifikasi span.font-mono {
@@ -844,168 +864,264 @@
     <div class="max-w-5xl mx-auto">
       <div class="reveal mb-12">
         <div class="section-number mb-2">PROJECTS</div>
-        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">GALERI PROJECT</h2>
+        <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">PROJECT YANG SUDAH DIKERJAKAN</h2>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Project Card 1 -->
+      <div class="grid sm:grid-cols-2 gap-6">
+        <!-- Project Card 1: Denah, Tampak dan Potongan -->
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+          <div
+            class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
-                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              <div
+                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                <div
+                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.25 2.25L15 7.5" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono text-zinc-400 font-medium">GAMBAR KERJA 2D</span>
+                <span class="text-[11px] font-mono text-zinc-600 mt-1">AutoCAD • Layout Presisi</span>
               </div>
               <div class="p-5">
-                <h3 class="text-white font-semibold text-sm">Rumah Tinggal 2 Lantai</h3>
-                <p class="text-zinc-500 text-xs mt-1">Gambar kerja lengkap arsitektur</p>
-                <div class="flex gap-2 mt-3">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-white font-semibold text-base">1. Denah, Tampak dan Potongan</h3>
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Arsitektural</span>
+                </div>
+                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                  Penyusunan gambar kerja arsitektur komprehensif mencakup denah tata ruang, elevasi tampak bangunan,
+                  dan gambar potongan detail teknis dengan standar notasi kerja profesional.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">AutoCAD</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">SketchUp
+                    LayOut</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Standar
+                    CAD</span>
                 </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <button
-                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                Lihat Detail / Gambar Kerja
-              </button>
+              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+                <span>Lihat Sampel Dokumen</span>
+                <span class="text-sm">&rarr;</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 2 -->
+        <!-- Project Card 2: Detail Teknis -->
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+          <div
+            class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
-                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              <div
+                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                <div
+                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233l2.848-2.848a2.548 2.548 0 00-3.586-3.586l-2.848 2.848m0 0l-3.03 2.496c-.384.317-.626.74-.766 1.208" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono text-zinc-400 font-medium">GAMBAR DETAIL TEKNIS</span>
+                <span class="text-[11px] font-mono text-zinc-600 mt-1">Sipil, Sambungan & Konstruksi</span>
               </div>
               <div class="p-5">
-                <h3 class="text-white font-semibold text-sm">Bangunan Komersial</h3>
-                <p class="text-zinc-500 text-xs mt-1">Desain dan detail teknis</p>
-                <div class="flex gap-2 mt-3">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-white font-semibold text-base">2. Detail Teknis</h3>
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Konstruksi</span>
+                </div>
+                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                  Pembuatan gambar pembesaran detail struktur & arsitektur: detail pondasi, sambungan baja/beton, detail
+                  kusen pintu-jendela, hingga detail sanitasi & plumbing (MEP).
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">LayOut</span>
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">AutoCAD</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Detail
+                    Kusen</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Detail
+                    Struktur</span>
                 </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <button
-                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                Lihat Detail / Gambar Kerja
-              </button>
+              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+                <span>Lihat Sampel Dokumen</span>
+                <span class="text-sm">&rarr;</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 3 -->
+        <!-- Project Card 3: Detail Interior -->
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+          <div
+            class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
-                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              <div
+                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                <div
+                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.75c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono text-zinc-400 font-medium">INTERIOR & BUILT-IN</span>
+                <span class="text-[11px] font-mono text-zinc-600 mt-1">Modeling 3D & Detail Furnitur</span>
               </div>
               <div class="p-5">
-                <h3 class="text-white font-semibold text-sm">Renovasi Bangunan</h3>
-                <p class="text-zinc-500 text-xs mt-1">Perencanaan renovasi & as-built</p>
-                <div class="flex gap-2 mt-3">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-white font-semibold text-base">3. Detail Interior</h3>
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
+                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Interior</span>
+                </div>
+                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                  Gambar kerja interior, detail instalasi built-in furniture (kitchen set, kabinet, drop ceiling),
+                  detail partisi, serta pemodelan visual 3D menggunakan SketchUp.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">LayOut</span>
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">SketchUp</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">AutoCAD</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Detail
+                    Furnitur</span>
                 </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <button
-                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                Lihat Detail / Gambar Kerja
-              </button>
+              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+                <span>Lihat Sampel Dokumen</span>
+                <span class="text-sm">&rarr;</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Project Card 4 -->
+        <!-- Project Card 4: Dokumentasi Pekerjaan -->
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
+          <div
+            class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
-                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
+              <div
+                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+                <div
+                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+                  </svg>
+                </div>
+                <span class="text-xs font-mono text-zinc-400 font-medium">DOKUMENTASI LAPANGAN & AS-BUILT</span>
+                <span class="text-[11px] font-mono text-zinc-600 mt-1">Survey, Pengawasan & QC</span>
               </div>
               <div class="p-5">
-                <h3 class="text-white font-semibold text-sm">Denah Struktur</h3>
-                <p class="text-zinc-500 text-xs mt-1">Detail teknis dan struktur</p>
-                <div class="flex gap-2 mt-3">
+                <div class="flex items-center justify-between gap-2">
+                  <h3 class="text-white font-semibold text-base">4. Dokumentasi Pekerjaan</h3>
                   <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
+                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Dokumentasi</span>
+                </div>
+                <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
+                  Dokumentasi komprehensif aktivitas proyek: hasil survey pengukuran lapangan, penyesuaian kondisi
+                  as-built drawing, pencatatan revisi tim arsitek, serta quality control gambar kerja.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Survey
+                    Lapangan</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">As-Built
+                    Drawing</span>
+                  <span
+                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">QC
+                    Report</span>
                 </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <button
-                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                Lihat Detail / Gambar Kerja
-              </button>
+              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+                <span>Lihat Sampel Dokumen</span>
+                <span class="text-sm">&rarr;</span>
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Project Card 5 -->
-        <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
-            <div>
-              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
-                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
-              </div>
-              <div class="p-5">
-                <h3 class="text-white font-semibold text-sm">Interior Design</h3>
-                <p class="text-zinc-500 text-xs mt-1">3D modeling & gambar kerja</p>
-                <div class="flex gap-2 mt-3">
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
-                </div>
-              </div>
+      <!-- Feature Banner: Akses Seluruh Project di Google Drive -->
+      <div class="reveal mt-12">
+        <div
+          class="mono-card rounded-xl bg-gradient-to-r from-zinc-900/90 via-zinc-900/60 to-zinc-900/90 border border-zinc-800/80 p-7 sm:p-9 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          <div class="flex items-start sm:items-center gap-4 text-left">
+            <div
+              class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-zinc-800 border border-zinc-700/60 flex items-center justify-center shrink-0 shadow-inner">
+              <!-- Google Drive Icon -->
+              <svg class="w-7 h-7" viewBox="0 0 87.3 78" fill="none">
+                <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z"
+                  fill="#0066da" />
+                <path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44c-.8 1.4-1.2 2.95-1.2 4.5h27.5z"
+                  fill="#00ac47" />
+                <path
+                  d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z"
+                  fill="#ea4335" />
+                <path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d" />
+                <path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z"
+                  fill="#2684fc" />
+                <path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z"
+                  fill="#ffba00" />
+              </svg>
             </div>
-            <div class="p-5 pt-0">
-              <button
-                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                Lihat Detail / Gambar Kerja
-              </button>
+            <div>
+              <div
+                class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] font-mono text-zinc-300 uppercase tracking-wider mb-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>Google Drive Repository</span>
+              </div>
+              <h3 class="text-white font-bold text-lg sm:text-xl tracking-tight">Lihat Seluruh Arsip & Gambar Kerja
+                Lengkap</h3>
+              <p class="text-zinc-400 text-xs sm:text-sm mt-1 max-w-xl leading-relaxed">
+                Berikut file gambar project yang sudah dikerjakan.
+              </p>
             </div>
           </div>
-        </div>
 
-        <!-- Project Card 6 -->
-        <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full">
-            <div>
-              <div class="aspect-video bg-zinc-900 border-b border-zinc-800 flex items-center justify-center">
-                <span class="text-xs font-mono text-zinc-600">[ GAMBAR WORKSPACE / CAD ]</span>
-              </div>
-              <div class="p-5">
-                <h3 class="text-white font-semibold text-sm">Site Plan & Master Plan</h3>
-                <p class="text-zinc-500 text-xs mt-1">Perencanaan tata letak lahan</p>
-                <div class="flex gap-2 mt-3">
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">AutoCAD</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900">SketchUp</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-5 pt-0">
-              <button
-                class="w-full text-center text-xs font-mono py-2 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all cursor-pointer">
-                Lihat Detail / Gambar Kerja
-              </button>
-            </div>
-          </div>
+          <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
+            rel="noopener noreferrer"
+            class="gdrive-btn w-full md:w-auto shrink-0 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg border border-white bg-white text-black text-xs font-mono font-bold uppercase tracking-wider hover:bg-zinc-200 transition-all shadow-lg group cursor-pointer"
+            title="Buka Google Drive Mahareza Firdaus">
+            <span>Buka Google Drive</span>
+            <svg class="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </div>
