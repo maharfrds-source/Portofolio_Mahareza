@@ -470,27 +470,31 @@
 
     html.light #denahModal .modal-container,
     html.light #teknisModal .modal-container,
-    html.light #interiorModal .modal-container {
+    html.light #interiorModal .modal-container,
+    html.light #dokumentasiModal .modal-container {
       background-color: #ffffff !important;
       border-color: #e4e4e7 !important;
     }
 
     html.light #denahModal .modal-header,
     html.light #teknisModal .modal-header,
-    html.light #interiorModal .modal-header {
+    html.light #interiorModal .modal-header,
+    html.light #dokumentasiModal .modal-header {
       background-color: rgba(255, 255, 255, 0.95) !important;
       border-bottom-color: #e4e4e7 !important;
     }
 
     html.light #denahModal .modal-title,
     html.light #teknisModal .modal-title,
-    html.light #interiorModal .modal-title {
+    html.light #interiorModal .modal-title,
+    html.light #dokumentasiModal .modal-title {
       color: #09090b !important;
     }
 
     html.light #denahModal .modal-close-btn,
     html.light #teknisModal .modal-close-btn,
-    html.light #interiorModal .modal-close-btn {
+    html.light #interiorModal .modal-close-btn,
+    html.light #dokumentasiModal .modal-close-btn {
       background-color: #f4f4f5 !important;
       border-color: #e4e4e7 !important;
       color: #18181b !important;
@@ -498,26 +502,30 @@
 
     html.light #denahModal .modal-close-btn:hover,
     html.light #teknisModal .modal-close-btn:hover,
-    html.light #interiorModal .modal-close-btn:hover {
+    html.light #interiorModal .modal-close-btn:hover,
+    html.light #dokumentasiModal .modal-close-btn:hover {
       background-color: #e4e4e7 !important;
     }
 
     html.light #denahModal .modal-item-card,
     html.light #teknisModal .modal-item-card,
-    html.light #interiorModal .modal-item-card {
+    html.light #interiorModal .modal-item-card,
+    html.light #dokumentasiModal .modal-item-card {
       background-color: #fafafa !important;
       border-color: #e4e4e7 !important;
     }
 
     html.light #denahModal .modal-item-card:hover,
     html.light #teknisModal .modal-item-card:hover,
-    html.light #interiorModal .modal-item-card:hover {
+    html.light #interiorModal .modal-item-card:hover,
+    html.light #dokumentasiModal .modal-item-card:hover {
       border-color: #a1a1aa !important;
     }
 
     html.light #denahModal .modal-item-title,
     html.light #teknisModal .modal-item-title,
-    html.light #interiorModal .modal-item-title {
+    html.light #interiorModal .modal-item-title,
+    html.light #dokumentasiModal .modal-item-title {
       color: #18181b !important;
     }
   </style>
@@ -1021,51 +1029,26 @@
           <div
             class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div
-                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-                <div
-                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
-                  </svg>
-                </div>
-                <span class="text-xs font-mono text-zinc-400 font-medium">DOKUMENTASI LAPANGAN & AS-BUILT</span>
-                <span class="text-[11px] font-mono text-zinc-600 mt-1">Survey, Pengawasan & QC</span>
+              <div class="aspect-video bg-zinc-900/90 border-b border-zinc-800 relative overflow-hidden group/img">
+                <img src="Asset/Dokumentasi Pekerjaan/Cover4.jpg" alt="Cover Dokumentasi Pekerjaan"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div class="p-5">
                 <div class="flex items-center justify-between gap-2">
                   <h3 class="text-white font-semibold text-base">4. Dokumentasi Pekerjaan</h3>
-                  <span
-                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Dokumentasi</span>
                 </div>
                 <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
                   Dokumentasi komprehensif aktivitas proyek: hasil survey pengukuran lapangan, penyesuaian kondisi
-                  as-built drawing, pencatatan revisi tim arsitek, serta quality control gambar kerja.
+                  as-built drawing, rapat project, serta proses pembuatan gambar kerja.
                 </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Survey
-                    Lapangan</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">As-Built
-                    Drawing</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">QC
-                    Report</span>
-                </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+              <button type="button" onclick="openDokumentasiModal()"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded cursor-pointer">
                 <span>Lihat Sampel Dokumen</span>
                 <span class="text-sm">&rarr;</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -1906,6 +1889,136 @@
     </div>
   </div>
 
+  <!-- ========== MODAL SAMPEL DOKUMEN: DOKUMENTASI PEKERJAAN ========== -->
+  <div id="dokumentasiModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 overflow-hidden" role="dialog"
+    aria-modal="true" aria-labelledby="modalDokumentasiHeading">
+    <!-- Backdrop Blur -->
+    <div class="fixed inset-0 bg-black/80 modal-backdrop-blur transition-opacity duration-300"
+      onclick="closeDokumentasiModal()"></div>
+
+    <!-- Modal Content Window -->
+    <div
+      class="modal-container relative w-full max-w-5xl max-h-[92vh] bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl flex flex-col z-10 overflow-hidden transition-all transform duration-300">
+
+      <!-- Modal Header Sticky: Hanya Judul & Tombol Kembali -->
+      <div
+        class="modal-header px-5 sm:px-7 py-4 border-b border-zinc-800/80 bg-zinc-950/95 backdrop-blur flex items-center justify-between gap-4 shrink-0">
+        <h3 id="modalDokumentasiHeading" class="modal-title text-base sm:text-lg font-bold text-white tracking-tight">
+          Dokumentasi Pekerjaan
+        </h3>
+
+        <!-- Tombol Kembali Tunggal -->
+        <button type="button" onclick="closeDokumentasiModal()"
+          class="modal-close-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 hover:border-zinc-500 text-xs font-mono transition-all cursor-pointer shadow-sm group"
+          title="Kembali ke tampilan project (Esc)">
+          <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          <span class="font-medium">Kembali</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Hanya Menampilkan Foto-Foto Saja) -->
+      <div class="p-4 sm:p-6 overflow-y-auto">
+        <!-- Grid 8 Gambar Murni Dokumentasi Pekerjaan -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+
+          <!-- Foto Dokumentasi 1 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-1.jpeg', 'dokumentasi-1')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-1.jpeg" alt="dokumentasi-1" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 2 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-2.jpeg', 'dokumentasi-2')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-2.jpeg" alt="dokumentasi-2" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 3 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-3.jpeg', 'dokumentasi-3')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-3.jpeg" alt="dokumentasi-3" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 4 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-4.jpeg', 'dokumentasi-4')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-4.jpeg" alt="dokumentasi-4" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 5 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-5.jpeg', 'dokumentasi-5')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-5.jpeg" alt="dokumentasi-5" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 6 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-6.jpeg', 'dokumentasi-6')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-6.jpeg" alt="dokumentasi-6" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 7 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-7.jpg', 'dokumentasi-7')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-7.jpg" alt="dokumentasi-7" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Dokumentasi 8 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Dokumentasi Pekerjaan/dokumentasi-8.jpeg', 'dokumentasi-8')">
+              <img src="Asset/Dokumentasi Pekerjaan/dokumentasi-8.jpeg" alt="dokumentasi-8" loading="lazy"
+                class="w-full h-full object-cover p-1 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ========== LIGHTBOX FULLSCREEN PREVIEW ========== -->
   <div id="lightboxModal"
     class="fixed inset-0 z-[60] hidden flex items-center justify-center p-3 sm:p-6 bg-black/95 modal-backdrop-blur"
@@ -2267,10 +2380,11 @@
     const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
     applyThemeUI(currentTheme);
 
-    // === Modal Sampel Dokumen: Denah, Tampak & Potongan, Detail Teknis, Detail Interior ===
+    // === Modal Sampel Dokumen: Denah, Tampak & Potongan, Detail Teknis, Detail Interior, Dokumentasi Pekerjaan ===
     const denahModal = document.getElementById('denahModal');
     const teknisModal = document.getElementById('teknisModal');
     const interiorModal = document.getElementById('interiorModal');
+    const dokumentasiModal = document.getElementById('dokumentasiModal');
     const lightboxModal = document.getElementById('lightboxModal');
     const lightboxImage = document.getElementById('lightboxImage');
     const lightboxCaption = document.getElementById('lightboxCaption');
@@ -2279,7 +2393,8 @@
       return (!lightboxModal || lightboxModal.classList.contains('hidden')) &&
         (!denahModal || denahModal.classList.contains('hidden')) &&
         (!teknisModal || teknisModal.classList.contains('hidden')) &&
-        (!interiorModal || interiorModal.classList.contains('hidden'));
+        (!interiorModal || interiorModal.classList.contains('hidden')) &&
+        (!dokumentasiModal || dokumentasiModal.classList.contains('hidden'));
     }
 
     function openDenahModal() {
@@ -2330,6 +2445,22 @@
       }
     }
 
+    function openDokumentasiModal() {
+      if (dokumentasiModal) {
+        dokumentasiModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeDokumentasiModal() {
+      if (dokumentasiModal) {
+        dokumentasiModal.classList.add('hidden');
+        if (checkModalsClosed()) {
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
     function openLightbox(imageSrc, captionText) {
       if (lightboxModal && lightboxImage) {
         lightboxImage.src = imageSrc;
@@ -2349,7 +2480,8 @@
           // Kembalikan overflow sesuai apakah ada modal yang masih aktif
           const isModalOpen = (denahModal && !denahModal.classList.contains('hidden')) ||
             (teknisModal && !teknisModal.classList.contains('hidden')) ||
-            (interiorModal && !interiorModal.classList.contains('hidden'));
+            (interiorModal && !interiorModal.classList.contains('hidden')) ||
+            (dokumentasiModal && !dokumentasiModal.classList.contains('hidden'));
           if (isModalOpen) {
             document.body.style.overflow = 'hidden';
           } else {
@@ -2364,6 +2496,8 @@
       if (e.key === 'Escape') {
         if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
           closeLightbox(null, true);
+        } else if (dokumentasiModal && !dokumentasiModal.classList.contains('hidden')) {
+          closeDokumentasiModal();
         } else if (interiorModal && !interiorModal.classList.contains('hidden')) {
           closeInteriorModal();
         } else if (teknisModal && !teknisModal.classList.contains('hidden')) {
