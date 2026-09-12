@@ -885,40 +885,57 @@
 
       <div class="grid sm:grid-cols-2 gap-4">
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+          <div
+            onclick="openLightbox('Asset/Sertifikat/Keselamatan dan Kesehatan Kerja Operator K3 Umum.jpeg', 'Keselamatan dan Kesehatan Kerja Operator K3 Umum - BNSP 2024')"
+            class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between cursor-pointer group"
+            title="Klik untuk melihat foto sertifikat">
             <div>
               <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">BNSP • 2024</span>
-              <h3 class="text-white font-medium text-sm mt-1">Keselamatan dan Kesehatan Kerja Operator K3 Umum</h3>
+              <h3 class="text-white font-medium text-sm mt-1 group-hover:text-zinc-200 transition-colors">Keselamatan
+                dan Kesehatan Kerja Operator K3 Umum</h3>
             </div>
             <p class="text-zinc-500 text-xs mt-3">Badan Nasional Sertifikasi Profesi</p>
           </div>
         </div>
 
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+          <div
+            onclick="openLightbox('Asset/Sertifikat/SDM Vokasional Bidang Konstruksi.jpeg', 'SDM Vokasional Bidang Konstruksi - 2021')"
+            class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between cursor-pointer group"
+            title="Klik untuk melihat foto sertifikat">
             <div>
-              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Kepala Balai Jasa Konstruksi Wilayah III Jakarta • 2021</span>
-              <h3 class="text-white font-medium text-sm mt-1">SDM Vokasional Bidang Konstruksi</h3>
+              <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Kepala Balai Jasa Konstruksi
+                Wilayah III Jakarta • 2021</span>
+              <h3 class="text-white font-medium text-sm mt-1 group-hover:text-zinc-200 transition-colors">SDM Vokasional
+                Bidang Konstruksi</h3>
             </div>
             <p class="text-zinc-500 text-xs mt-3">Kepala Balai Jasa Konstruksi Wilayah III Jakarta</p>
           </div>
         </div>
 
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+          <div
+            onclick="openLightbox('Asset/Sertifikat/Sertifikat Kompetensi Jasa Konstruksi.jpeg', 'Sertifikat Kompetensi Jasa Konstruksi - BNSP 2021')"
+            class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between cursor-pointer group"
+            title="Klik untuk melihat foto sertifikat">
             <div>
               <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">BNSP • 2021</span>
-              <h3 class="text-white font-medium text-sm mt-1">Sertifikat Kompetensi Jasa Konstruksi</h3>
+              <h3 class="text-white font-medium text-sm mt-1 group-hover:text-zinc-200 transition-colors">Sertifikat
+                Kompetensi Jasa Konstruksi</h3>
             </div>
             <p class="text-zinc-500 text-xs mt-3">Badan Nasional Sertifikasi Profesi</p>
           </div>
         </div>
 
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between">
+          <div
+            onclick="openLightbox('Asset/Sertifikat/Sertifikat PT. Astra Daihatsu Motor2.jpeg', 'Best Employee & Appreciation Detection Defect - PT Astra Daihatsu Motor 2023')"
+            class="mono-card rounded-lg bg-zinc-900/40 p-5 h-full flex flex-col justify-between cursor-pointer group"
+            title="Klik untuk melihat foto sertifikat">
             <div>
               <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">ADM • 2023</span>
-              <h3 class="text-white font-medium text-sm mt-1">Best Employee & Appreciation Detection Defect</h3>
+              <h3 class="text-white font-medium text-sm mt-1 group-hover:text-zinc-200 transition-colors">Best Employee
+                & Appreciation Detection Defect</h3>
             </div>
             <p class="text-zinc-500 text-xs mt-3">PT Astra Daihatsu Motor</p>
           </div>
@@ -2025,11 +2042,13 @@
       <div class="w-full flex items-center justify-between mb-3 text-white">
         <div id="lightboxCaption" class="text-xs sm:text-sm font-mono text-zinc-300 truncate pr-4"></div>
         <button type="button" onclick="closeLightbox(event, true)"
-          class="shrink-0 p-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white transition-colors cursor-pointer"
-          title="Tutup Pratinjau (Esc)">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          class="shrink-0 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-zinc-800/90 hover:bg-zinc-700 text-zinc-200 hover:text-white border border-zinc-700/80 text-xs font-mono transition-all cursor-pointer shadow-sm"
+          title="Kembali (Esc)">
+          <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
           </svg>
+          <span class="font-medium">Kembali</span>
         </button>
       </div>
 
