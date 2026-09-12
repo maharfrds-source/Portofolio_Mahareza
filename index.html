@@ -373,22 +373,52 @@
       color: #52525b !important;
     }
 
+    /* === Google Drive Banner Light Mode === */
+    html.light #projects .gdrive-banner {
+      background: #ffffff !important;
+      background-image: none !important;
+      border-color: #e4e4e7 !important;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03) !important;
+    }
+
+    html.light #projects .gdrive-banner .gdrive-icon-box {
+      background-color: #f4f4f5 !important;
+      border-color: #e4e4e7 !important;
+      box-shadow: none !important;
+    }
+
+    html.light #projects .gdrive-banner h3 {
+      color: #09090b !important;
+    }
+
+    html.light #projects .gdrive-banner p {
+      color: #52525b !important;
+    }
+
+    html.light #projects a.gdrive-btn,
     html.light .gdrive-btn {
       background-color: #09090b !important;
       color: #ffffff !important;
       border-color: #09090b !important;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
     }
 
+    html.light #projects a.gdrive-btn:hover,
     html.light .gdrive-btn:hover {
       background-color: #27272a !important;
       border-color: #27272a !important;
       color: #ffffff !important;
     }
 
-    html.light .gdrive-btn svg,
+    html.light #projects a.gdrive-btn span,
     html.light .gdrive-btn span {
       color: #ffffff !important;
+    }
+
+    html.light #projects a.gdrive-btn svg,
+    html.light .gdrive-btn svg {
+      color: #ffffff !important;
+      stroke: #ffffff !important;
     }
 
     html.light #sertifikasi span.font-mono {
@@ -433,12 +463,6 @@
       background-color: #f4f4f5 !important;
       border-color: #e4e4e7 !important;
       color: #18181b !important;
-    }
-
-    html.light #kontak .status-badge {
-      background-color: #ecfdf5 !important;
-      border-color: #a7f3d0 !important;
-      color: #047857 !important;
     }
 
     html.light footer {
@@ -1057,10 +1081,10 @@
       <!-- Feature Banner: Akses Seluruh Project di Google Drive -->
       <div class="reveal mt-12">
         <div
-          class="mono-card rounded-xl bg-gradient-to-r from-zinc-900/90 via-zinc-900/60 to-zinc-900/90 border border-zinc-800/80 p-7 sm:p-9 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+          class="gdrive-banner mono-card rounded-xl bg-gradient-to-r from-zinc-900/90 via-zinc-900/60 to-zinc-900/90 border border-zinc-800/80 p-7 sm:p-9 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
           <div class="flex items-start sm:items-center gap-4 text-left">
             <div
-              class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-zinc-800 border border-zinc-700/60 flex items-center justify-center shrink-0 shadow-inner">
+              class="gdrive-icon-box w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-zinc-800 border border-zinc-700/60 flex items-center justify-center shrink-0 shadow-inner">
               <!-- Google Drive Icon -->
               <svg class="w-7 h-7" viewBox="0 0 87.3 78" fill="none">
                 <path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z"
@@ -1078,11 +1102,6 @@
               </svg>
             </div>
             <div>
-              <div
-                class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-zinc-800/80 border border-zinc-700/50 text-[10px] font-mono text-zinc-300 uppercase tracking-wider mb-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                <span>Google Drive Repository</span>
-              </div>
               <h3 class="text-white font-bold text-lg sm:text-xl tracking-tight">Lihat Seluruh Arsip & Gambar Kerja
                 Lengkap</h3>
               <p class="text-zinc-400 text-xs sm:text-sm mt-1 max-w-xl leading-relaxed">
@@ -2053,13 +2072,6 @@
     <div class="max-w-4xl mx-auto text-center w-full">
       <!-- Status Badge & Heading -->
       <div class="reveal mb-10">
-        <!-- Pulsing Availability Badge -->
-        <div
-          class="status-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono mb-4 shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Tersedia untuk Pekerjaan • Full-Time</span>
-        </div>
-
         <div class="section-number mb-2">KONTAK</div>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
           MARI BEKERJA SAMA
