@@ -461,6 +461,65 @@
     html.light .mobile-nav-link:hover {
       color: #09090b !important;
     }
+
+    /* === Project Sample Modal Styling === */
+    .modal-backdrop-blur {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    html.light #denahModal .modal-container,
+    html.light #teknisModal .modal-container,
+    html.light #interiorModal .modal-container {
+      background-color: #ffffff !important;
+      border-color: #e4e4e7 !important;
+    }
+
+    html.light #denahModal .modal-header,
+    html.light #teknisModal .modal-header,
+    html.light #interiorModal .modal-header {
+      background-color: rgba(255, 255, 255, 0.95) !important;
+      border-bottom-color: #e4e4e7 !important;
+    }
+
+    html.light #denahModal .modal-title,
+    html.light #teknisModal .modal-title,
+    html.light #interiorModal .modal-title {
+      color: #09090b !important;
+    }
+
+    html.light #denahModal .modal-close-btn,
+    html.light #teknisModal .modal-close-btn,
+    html.light #interiorModal .modal-close-btn {
+      background-color: #f4f4f5 !important;
+      border-color: #e4e4e7 !important;
+      color: #18181b !important;
+    }
+
+    html.light #denahModal .modal-close-btn:hover,
+    html.light #teknisModal .modal-close-btn:hover,
+    html.light #interiorModal .modal-close-btn:hover {
+      background-color: #e4e4e7 !important;
+    }
+
+    html.light #denahModal .modal-item-card,
+    html.light #teknisModal .modal-item-card,
+    html.light #interiorModal .modal-item-card {
+      background-color: #fafafa !important;
+      border-color: #e4e4e7 !important;
+    }
+
+    html.light #denahModal .modal-item-card:hover,
+    html.light #teknisModal .modal-item-card:hover,
+    html.light #interiorModal .modal-item-card:hover {
+      border-color: #a1a1aa !important;
+    }
+
+    html.light #denahModal .modal-item-title,
+    html.light #teknisModal .modal-item-title,
+    html.light #interiorModal .modal-item-title {
+      color: #18181b !important;
+    }
   </style>
 </head>
 
@@ -873,48 +932,26 @@
           <div
             class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div
-                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-                <div
-                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.25 2.25L15 7.5" />
-                  </svg>
-                </div>
-                <span class="text-xs font-mono text-zinc-400 font-medium">GAMBAR KERJA 2D</span>
-                <span class="text-[11px] font-mono text-zinc-600 mt-1">AutoCAD • Layout Presisi</span>
+              <div class="aspect-video bg-zinc-900/90 border-b border-zinc-800 relative overflow-hidden group/img">
+                <img src="Asset/Denah, Tampak dan Potongan/Cover1.jpg" alt="Cover Denah, Tampak dan Potongan"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div class="p-5">
                 <div class="flex items-center justify-between gap-2">
                   <h3 class="text-white font-semibold text-base">1. Denah, Tampak dan Potongan</h3>
-                  <span
-                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Arsitektural</span>
                 </div>
                 <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
                   Penyusunan gambar kerja arsitektur komprehensif mencakup denah tata ruang, elevasi tampak bangunan,
                   dan gambar potongan detail teknis dengan standar notasi kerja profesional.
                 </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">AutoCAD</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">SketchUp
-                    LayOut</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Standar
-                    CAD</span>
-                </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+              <button type="button" onclick="openDenahModal()"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded cursor-pointer">
                 <span>Lihat Sampel Dokumen</span>
                 <span class="text-sm">&rarr;</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -924,48 +961,28 @@
           <div
             class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div
-                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-                <div
-                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233l2.848-2.848a2.548 2.548 0 00-3.586-3.586l-2.848 2.848m0 0l-3.03 2.496c-.384.317-.626.74-.766 1.208" />
-                  </svg>
-                </div>
-                <span class="text-xs font-mono text-zinc-400 font-medium">GAMBAR DETAIL TEKNIS</span>
-                <span class="text-[11px] font-mono text-zinc-600 mt-1">Sipil, Sambungan & Konstruksi</span>
+              <div class="aspect-video bg-zinc-900/90 border-b border-zinc-800 relative overflow-hidden group/img">
+                <img src="Asset/Detail Teknis/Cover2.jpg" alt="Cover Detail Teknis"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div class="p-5">
                 <div class="flex items-center justify-between gap-2">
                   <h3 class="text-white font-semibold text-base">2. Detail Teknis</h3>
-                  <span
-                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Konstruksi</span>
                 </div>
                 <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
-                  Pembuatan gambar pembesaran detail struktur & arsitektur: detail pondasi, sambungan baja/beton, detail
-                  kusen pintu-jendela, hingga detail sanitasi & plumbing (MEP).
+                  Pembuatan gambar gambar secara detail yang memperbesar bagian tertentu secara presisi beserta ukuran,
+                  jenis material, dan metode sambungannya; tujuannya berfungsi sebagai panduan praktis tukang di
+                  lapangan agar pemasangan tidak keliru, dasar perhitungan volume bahan untuk RAB, serta acuan kontrol
+                  mutu bagi pengawas proyek.
                 </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">AutoCAD</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Detail
-                    Kusen</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Detail
-                    Struktur</span>
-                </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+              <button type="button" onclick="openTeknisModal()"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded cursor-pointer">
                 <span>Lihat Sampel Dokumen</span>
                 <span class="text-sm">&rarr;</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -975,47 +992,26 @@
           <div
             class="mono-card rounded-lg bg-zinc-900/40 overflow-hidden flex flex-col justify-between h-full group hover:border-zinc-500 transition-all duration-300">
             <div>
-              <div
-                class="aspect-video bg-zinc-900/90 border-b border-zinc-800 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
-                <div
-                  class="w-12 h-12 rounded-xl bg-zinc-800/80 border border-zinc-700/60 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                  <svg class="w-6 h-6 text-zinc-300" fill="none" stroke="currentColor" stroke-width="1.8"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.75c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
-                  </svg>
-                </div>
-                <span class="text-xs font-mono text-zinc-400 font-medium">INTERIOR & BUILT-IN</span>
-                <span class="text-[11px] font-mono text-zinc-600 mt-1">Modeling 3D & Detail Furnitur</span>
+              <div class="aspect-video bg-zinc-900/90 border-b border-zinc-800 relative overflow-hidden group/img">
+                <img src="Asset/Detail Interior/Cover3.jpg" alt="Cover Detail Interior"
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div class="p-5">
                 <div class="flex items-center justify-between gap-2">
                   <h3 class="text-white font-semibold text-base">3. Detail Interior</h3>
-                  <span
-                    class="text-[10px] font-mono text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-800/60 border border-zinc-700/40">Interior</span>
                 </div>
                 <p class="text-zinc-400 text-xs mt-2 leading-relaxed">
                   Gambar kerja interior, detail instalasi built-in furniture (kitchen set, kabinet, drop ceiling),
                   detail partisi, serta pemodelan visual 3D menggunakan SketchUp.
                 </p>
-                <div class="flex flex-wrap gap-2 mt-4">
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">SketchUp</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">AutoCAD</span>
-                  <span
-                    class="text-[10px] font-mono text-zinc-400 px-2 py-0.5 border border-zinc-800 bg-zinc-900/90 rounded">Detail
-                    Furnitur</span>
-                </div>
               </div>
             </div>
             <div class="p-5 pt-0">
-              <a href="https://drive.google.com/drive/folders/1_Kh0Gw0dsxvcEZ8p1uqv-LBCdYIVs9q_?hl=ID" target="_blank"
-                rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded">
+              <button type="button" onclick="openInteriorModal()"
+                class="w-full inline-flex items-center justify-center gap-2 text-center text-xs font-mono py-2.5 border border-zinc-700 text-zinc-300 hover:bg-white hover:text-black hover:border-white transition-all rounded cursor-pointer">
                 <span>Lihat Sampel Dokumen</span>
                 <span class="text-sm">&rarr;</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -1126,6 +1122,816 @@
       </div>
     </div>
   </section>
+
+  <!-- ========== MODAL SAMPEL DOKUMEN: DENAH, TAMPAK DAN POTONGAN ========== -->
+  <div id="denahModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 overflow-hidden"
+    role="dialog" aria-modal="true" aria-labelledby="modalHeading">
+    <!-- Backdrop Blur -->
+    <div class="fixed inset-0 bg-black/80 modal-backdrop-blur transition-opacity duration-300"
+      onclick="closeDenahModal()"></div>
+
+    <!-- Modal Content Window -->
+    <div
+      class="modal-container relative w-full max-w-5xl max-h-[92vh] bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl flex flex-col z-10 overflow-hidden transition-all transform duration-300">
+
+      <!-- Modal Header Sticky: Hanya Judul & Tombol Kembali -->
+      <div
+        class="modal-header px-5 sm:px-7 py-4 border-b border-zinc-800/80 bg-zinc-950/95 backdrop-blur flex items-center justify-between gap-4 shrink-0">
+        <h3 id="modalHeading" class="modal-title text-base sm:text-lg font-bold text-white tracking-tight">
+          Denah, Tampak dan Potongan
+        </h3>
+
+        <!-- Tombol Kembali Tunggal -->
+        <button type="button" onclick="closeDenahModal()"
+          class="modal-close-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 hover:border-zinc-500 text-xs font-mono transition-all cursor-pointer shadow-sm group"
+          title="Kembali ke tampilan project (Esc)">
+          <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          <span class="font-medium">Kembali</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Hanya Menampilkan Foto-Foto Saja) -->
+      <div class="p-4 sm:p-6 overflow-y-auto">
+        <!-- Grid 8 Gambar Murni -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+
+          <!-- Foto 1 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-1.png', 'Denah, tampak dan potongan-1')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-1.png"
+                alt="Denah, tampak dan potongan-1" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 2 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-2.png', 'Denah, tampak dan potongan-2')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-2.png"
+                alt="Denah, tampak dan potongan-2" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 3 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-3.png', 'Denah, tampak dan potongan-3')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-3.png"
+                alt="Denah, tampak dan potongan-3" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 4 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-4.png', 'Denah, tampak dan potongan-4')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-4.png"
+                alt="Denah, tampak dan potongan-4" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 5 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-5.png', 'Denah, tampak dan potongan-5')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-5.png"
+                alt="Denah, tampak dan potongan-5" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 6 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-6.png', 'Denah, tampak dan potongan-6')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-6.png"
+                alt="Denah, tampak dan potongan-6" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 7 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-7.png', 'Denah, tampak dan potongan-7')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-7.png"
+                alt="Denah, tampak dan potongan-7" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto 8 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-8.png', 'Denah, tampak dan potongan-8')">
+              <img src="Asset/Denah, Tampak dan Potongan/Denah, tampak dan potongan-8.png"
+                alt="Denah, tampak dan potongan-8" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 003 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_003.png', '2626_THEO PROJECT_DED ARS_REV.01_003')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_003.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_003" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 004 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_004.png', '2626_THEO PROJECT_DED ARS_REV.01_004')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_004.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_004" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 005 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_005.png', '2626_THEO PROJECT_DED ARS_REV.01_005')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_005.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_005" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 006 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_006.png', '2626_THEO PROJECT_DED ARS_REV.01_006')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_006.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_006" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 007 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_007.png', '2626_THEO PROJECT_DED ARS_REV.01_007')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_007.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_007" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 008 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_008.png', '2626_THEO PROJECT_DED ARS_REV.01_008')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_008.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_008" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 009 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_009.png', '2626_THEO PROJECT_DED ARS_REV.01_009')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_009.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_009" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 010 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_010.png', '2626_THEO PROJECT_DED ARS_REV.01_010')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_010.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_010" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 011 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_011.png', '2626_THEO PROJECT_DED ARS_REV.01_011')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_011.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_011" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 012 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_012.png', '2626_THEO PROJECT_DED ARS_REV.01_012')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_012.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_012" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 013 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_013.png', '2626_THEO PROJECT_DED ARS_REV.01_013')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_013.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_013" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 014 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_014.png', '2626_THEO PROJECT_DED ARS_REV.01_014')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_014.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_014" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 015 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_015.png', '2626_THEO PROJECT_DED ARS_REV.01_015')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_015.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_015" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Theo Project 016 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_016.png', '2626_THEO PROJECT_DED ARS_REV.01_016')">
+              <img src="Asset/Denah, Tampak dan Potongan/2626_THEO PROJECT_DED ARS_REV.01_016.png"
+                alt="2626_THEO PROJECT_DED ARS_REV.01_016" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== MODAL SAMPEL DOKUMEN: DETAIL TEKNIS ========== -->
+  <div id="teknisModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 overflow-hidden"
+    role="dialog" aria-modal="true" aria-labelledby="modalTeknisHeading">
+    <!-- Backdrop Blur -->
+    <div class="fixed inset-0 bg-black/80 modal-backdrop-blur transition-opacity duration-300"
+      onclick="closeTeknisModal()"></div>
+
+    <!-- Modal Content Window -->
+    <div
+      class="modal-container relative w-full max-w-5xl max-h-[92vh] bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl flex flex-col z-10 overflow-hidden transition-all transform duration-300">
+
+      <!-- Modal Header Sticky: Hanya Judul & Tombol Kembali -->
+      <div
+        class="modal-header px-5 sm:px-7 py-4 border-b border-zinc-800/80 bg-zinc-950/95 backdrop-blur flex items-center justify-between gap-4 shrink-0">
+        <h3 id="modalTeknisHeading" class="modal-title text-base sm:text-lg font-bold text-white tracking-tight">
+          Detail Teknis
+        </h3>
+
+        <!-- Tombol Kembali Tunggal -->
+        <button type="button" onclick="closeTeknisModal()"
+          class="modal-close-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 hover:border-zinc-500 text-xs font-mono transition-all cursor-pointer shadow-sm group"
+          title="Kembali ke tampilan project (Esc)">
+          <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          <span class="font-medium">Kembali</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Hanya Menampilkan Foto-Foto Saja) -->
+      <div class="p-4 sm:p-6 overflow-y-auto">
+        <!-- Grid 15 Gambar Murni Detail Teknis -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+
+          <!-- Foto Detail Teknis 001 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_001.png', 'Detail Teknis_001')">
+              <img src="Asset/Detail Teknis/Detail Teknis_001.png" alt="Detail Teknis_001" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 002 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_002.png', 'Detail Teknis_002')">
+              <img src="Asset/Detail Teknis/Detail Teknis_002.png" alt="Detail Teknis_002" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 003 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_003.png', 'Detail Teknis_003')">
+              <img src="Asset/Detail Teknis/Detail Teknis_003.png" alt="Detail Teknis_003" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 004 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_004.png', 'Detail Teknis_004')">
+              <img src="Asset/Detail Teknis/Detail Teknis_004.png" alt="Detail Teknis_004" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 005 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_005.png', 'Detail Teknis_005')">
+              <img src="Asset/Detail Teknis/Detail Teknis_005.png" alt="Detail Teknis_005" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 006 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_006.png', 'Detail Teknis_006')">
+              <img src="Asset/Detail Teknis/Detail Teknis_006.png" alt="Detail Teknis_006" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 007 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_007.png', 'Detail Teknis_007')">
+              <img src="Asset/Detail Teknis/Detail Teknis_007.png" alt="Detail Teknis_007" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 008 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_008.png', 'Detail Teknis_008')">
+              <img src="Asset/Detail Teknis/Detail Teknis_008.png" alt="Detail Teknis_008" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 009 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_009.png', 'Detail Teknis_009')">
+              <img src="Asset/Detail Teknis/Detail Teknis_009.png" alt="Detail Teknis_009" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 010 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_010.png', 'Detail Teknis_010')">
+              <img src="Asset/Detail Teknis/Detail Teknis_010.png" alt="Detail Teknis_010" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 011 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_011.png', 'Detail Teknis_011')">
+              <img src="Asset/Detail Teknis/Detail Teknis_011.png" alt="Detail Teknis_011" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 012 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_012.png', 'Detail Teknis_012')">
+              <img src="Asset/Detail Teknis/Detail Teknis_012.png" alt="Detail Teknis_012" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 013 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_013.png', 'Detail Teknis_013')">
+              <img src="Asset/Detail Teknis/Detail Teknis_013.png" alt="Detail Teknis_013" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 014 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_014.png', 'Detail Teknis_014')">
+              <img src="Asset/Detail Teknis/Detail Teknis_014.png" alt="Detail Teknis_014" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Teknis 015 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Teknis/Detail Teknis_015.png', 'Detail Teknis_015')">
+              <img src="Asset/Detail Teknis/Detail Teknis_015.png" alt="Detail Teknis_015" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== MODAL SAMPEL DOKUMEN: DETAIL INTERIOR ========== -->
+  <div id="interiorModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 overflow-hidden"
+    role="dialog" aria-modal="true" aria-labelledby="modalInteriorHeading">
+    <!-- Backdrop Blur -->
+    <div class="fixed inset-0 bg-black/80 modal-backdrop-blur transition-opacity duration-300"
+      onclick="closeInteriorModal()"></div>
+
+    <!-- Modal Content Window -->
+    <div
+      class="modal-container relative w-full max-w-5xl max-h-[92vh] bg-zinc-950 border border-zinc-800 rounded-2xl shadow-2xl flex flex-col z-10 overflow-hidden transition-all transform duration-300">
+
+      <!-- Modal Header Sticky: Hanya Judul & Tombol Kembali -->
+      <div
+        class="modal-header px-5 sm:px-7 py-4 border-b border-zinc-800/80 bg-zinc-950/95 backdrop-blur flex items-center justify-between gap-4 shrink-0">
+        <h3 id="modalInteriorHeading" class="modal-title text-base sm:text-lg font-bold text-white tracking-tight">
+          Detail Interior
+        </h3>
+
+        <!-- Tombol Kembali Tunggal -->
+        <button type="button" onclick="closeInteriorModal()"
+          class="modal-close-btn inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 bg-zinc-900 text-zinc-300 hover:text-white hover:bg-zinc-800 hover:border-zinc-500 text-xs font-mono transition-all cursor-pointer shadow-sm group"
+          title="Kembali ke tampilan project (Esc)">
+          <svg class="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          <span class="font-medium">Kembali</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Hanya Menampilkan Foto-Foto Saja) -->
+      <div class="p-4 sm:p-6 overflow-y-auto">
+        <!-- Grid 21 Gambar Murni Detail Interior -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+
+          <!-- Foto Detail Interior 001 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_001.png', 'Detail Interior_001')">
+              <img src="Asset/Detail Interior/Detail Interior_001.png" alt="Detail Interior_001" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 002 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_002.png', 'Detail Interior_002')">
+              <img src="Asset/Detail Interior/Detail Interior_002.png" alt="Detail Interior_002" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 003 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_003.png', 'Detail Interior_003')">
+              <img src="Asset/Detail Interior/Detail Interior_003.png" alt="Detail Interior_003" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 004 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_004.png', 'Detail Interior_004')">
+              <img src="Asset/Detail Interior/Detail Interior_004.png" alt="Detail Interior_004" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 005 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_005.png', 'Detail Interior_005')">
+              <img src="Asset/Detail Interior/Detail Interior_005.png" alt="Detail Interior_005" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 006 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_006.png', 'Detail Interior_006')">
+              <img src="Asset/Detail Interior/Detail Interior_006.png" alt="Detail Interior_006" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 007 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_007.png', 'Detail Interior_007')">
+              <img src="Asset/Detail Interior/Detail Interior_007.png" alt="Detail Interior_007" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 008 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_008.png', 'Detail Interior_008')">
+              <img src="Asset/Detail Interior/Detail Interior_008.png" alt="Detail Interior_008" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 009 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_009.png', 'Detail Interior_009')">
+              <img src="Asset/Detail Interior/Detail Interior_009.png" alt="Detail Interior_009" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 010 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_010.png', 'Detail Interior_010')">
+              <img src="Asset/Detail Interior/Detail Interior_010.png" alt="Detail Interior_010" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 011 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_011.png', 'Detail Interior_011')">
+              <img src="Asset/Detail Interior/Detail Interior_011.png" alt="Detail Interior_011" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 012 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_012.png', 'Detail Interior_012')">
+              <img src="Asset/Detail Interior/Detail Interior_012.png" alt="Detail Interior_012" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 013 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_013.png', 'Detail Interior_013')">
+              <img src="Asset/Detail Interior/Detail Interior_013.png" alt="Detail Interior_013" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 014 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_014.png', 'Detail Interior_014')">
+              <img src="Asset/Detail Interior/Detail Interior_014.png" alt="Detail Interior_014" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 015 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_015.png', 'Detail Interior_015')">
+              <img src="Asset/Detail Interior/Detail Interior_015.png" alt="Detail Interior_015" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 016 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_016.png', 'Detail Interior_016')">
+              <img src="Asset/Detail Interior/Detail Interior_016.png" alt="Detail Interior_016" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 017 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_017.png', 'Detail Interior_017')">
+              <img src="Asset/Detail Interior/Detail Interior_017.png" alt="Detail Interior_017" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 018 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_018.png', 'Detail Interior_018')">
+              <img src="Asset/Detail Interior/Detail Interior_018.png" alt="Detail Interior_018" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 019 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_019.png', 'Detail Interior_019')">
+              <img src="Asset/Detail Interior/Detail Interior_019.png" alt="Detail Interior_019" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 020 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_020.png', 'Detail Interior_020')">
+              <img src="Asset/Detail Interior/Detail Interior_020.png" alt="Detail Interior_020" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+          <!-- Foto Detail Interior 021 -->
+          <div
+            class="modal-item-card group bg-zinc-900/60 border border-zinc-800/80 rounded-xl overflow-hidden hover:border-zinc-500 transition-all shadow-md">
+            <div
+              class="relative overflow-hidden cursor-zoom-in bg-white/5 aspect-[16/10] flex items-center justify-center"
+              onclick="openLightbox('Asset/Detail Interior/Detail Interior_021.png', 'Detail Interior_021')">
+              <img src="Asset/Detail Interior/Detail Interior_021.png" alt="Detail Interior_021" loading="lazy"
+                class="w-full h-full object-contain p-2 group-hover:scale-[1.03] transition-transform duration-300" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== LIGHTBOX FULLSCREEN PREVIEW ========== -->
+  <div id="lightboxModal"
+    class="fixed inset-0 z-[60] hidden flex items-center justify-center p-3 sm:p-6 bg-black/95 modal-backdrop-blur"
+    onclick="closeLightbox(event)">
+    <div class="relative max-w-6xl w-full max-h-[95vh] flex flex-col items-center">
+      <!-- Lightbox Header -->
+      <div class="w-full flex items-center justify-between mb-3 text-white">
+        <div id="lightboxCaption" class="text-xs sm:text-sm font-mono text-zinc-300 truncate pr-4"></div>
+        <button type="button" onclick="closeLightbox(event, true)"
+          class="shrink-0 p-2 rounded-lg bg-zinc-800/80 hover:bg-zinc-700 text-zinc-300 hover:text-white transition-colors cursor-pointer"
+          title="Tutup Pratinjau (Esc)">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Lightbox Image Wrapper with white bg for architectural drawings -->
+      <div
+        class="relative max-w-full max-h-[85vh] bg-white rounded-lg p-2 overflow-hidden shadow-2xl flex items-center justify-center"
+        onclick="event.stopPropagation()">
+        <img id="lightboxImage" src="" alt="Pratinjau Gambar Kerja"
+          class="max-w-full max-h-[80vh] object-contain select-none" />
+      </div>
+    </div>
+  </div>
 
 
   <!-- ========== KONTAK / FOOTER ========== -->
@@ -1460,6 +2266,113 @@
     // Initial theme load
     const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
     applyThemeUI(currentTheme);
+
+    // === Modal Sampel Dokumen: Denah, Tampak & Potongan, Detail Teknis, Detail Interior ===
+    const denahModal = document.getElementById('denahModal');
+    const teknisModal = document.getElementById('teknisModal');
+    const interiorModal = document.getElementById('interiorModal');
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    function checkModalsClosed() {
+      return (!lightboxModal || lightboxModal.classList.contains('hidden')) &&
+        (!denahModal || denahModal.classList.contains('hidden')) &&
+        (!teknisModal || teknisModal.classList.contains('hidden')) &&
+        (!interiorModal || interiorModal.classList.contains('hidden'));
+    }
+
+    function openDenahModal() {
+      if (denahModal) {
+        denahModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeDenahModal() {
+      if (denahModal) {
+        denahModal.classList.add('hidden');
+        if (checkModalsClosed()) {
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function openTeknisModal() {
+      if (teknisModal) {
+        teknisModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeTeknisModal() {
+      if (teknisModal) {
+        teknisModal.classList.add('hidden');
+        if (checkModalsClosed()) {
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function openInteriorModal() {
+      if (interiorModal) {
+        interiorModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeInteriorModal() {
+      if (interiorModal) {
+        interiorModal.classList.add('hidden');
+        if (checkModalsClosed()) {
+          document.body.style.overflow = '';
+        }
+      }
+    }
+
+    function openLightbox(imageSrc, captionText) {
+      if (lightboxModal && lightboxImage) {
+        lightboxImage.src = imageSrc;
+        if (lightboxCaption) {
+          lightboxCaption.textContent = captionText || 'Pratinjau Gambar Dokumen';
+        }
+        lightboxModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeLightbox(e, force = false) {
+      if (force || e.target === lightboxModal) {
+        if (lightboxModal) {
+          lightboxModal.classList.add('hidden');
+          if (lightboxImage) lightboxImage.src = '';
+          // Kembalikan overflow sesuai apakah ada modal yang masih aktif
+          const isModalOpen = (denahModal && !denahModal.classList.contains('hidden')) ||
+            (teknisModal && !teknisModal.classList.contains('hidden')) ||
+            (interiorModal && !interiorModal.classList.contains('hidden'));
+          if (isModalOpen) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+        }
+      }
+    }
+
+    // Keyboard navigation (ESC key)
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
+          closeLightbox(null, true);
+        } else if (interiorModal && !interiorModal.classList.contains('hidden')) {
+          closeInteriorModal();
+        } else if (teknisModal && !teknisModal.classList.contains('hidden')) {
+          closeTeknisModal();
+        } else if (denahModal && !denahModal.classList.contains('hidden')) {
+          closeDenahModal();
+        }
+      }
+    });
   </script>
 
 </body>
