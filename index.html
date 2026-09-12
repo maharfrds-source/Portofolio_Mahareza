@@ -18,6 +18,12 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
     rel="stylesheet" />
 
+  <script>
+    if (localStorage.getItem('portfolio-theme') === 'light') {
+      document.documentElement.classList.add('light');
+    }
+  </script>
+
   <style type="text/tailwindcss">
     @theme {
       --color-black-bg: #09090b;
@@ -159,6 +165,254 @@
       letter-spacing: 0.2em;
       color: #52525b;
     }
+
+    /* === Smooth Theme Transitions === */
+    body,
+    #navbar,
+    .mono-card,
+    section,
+    footer,
+    .theme-toggle {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* === LIGHT THEME RULES === */
+    html.light {
+      color-scheme: light;
+    }
+
+    html.light * {
+      scrollbar-color: #cbd5e1 #f8fafc;
+    }
+
+    html.light body {
+      background-color: #fafafa !important;
+      color: #52525b !important;
+    }
+
+    html.light .grid-bg {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px) !important;
+    }
+
+    html.light #navbar {
+      background-color: rgba(255, 255, 255, 0.88) !important;
+      border-bottom-color: #e4e4e7 !important;
+    }
+
+    html.light #navbar .group div {
+      border-color: #d4d4d8 !important;
+    }
+
+    html.light #navbar .group:hover div {
+      border-color: #09090b !important;
+    }
+
+    html.light #navbar .group span.text-white {
+      color: #09090b !important;
+    }
+
+    html.light .nav-link {
+      color: #71717a !important;
+    }
+
+    html.light .nav-link:hover,
+    html.light .nav-link.active {
+      color: #09090b !important;
+    }
+
+    html.light .nav-link::after {
+      background: #09090b !important;
+    }
+
+    html.light .theme-toggle {
+      background-color: #f4f4f5 !important;
+      border-color: #e4e4e7 !important;
+      color: #09090b !important;
+    }
+
+    html.light .theme-toggle:hover {
+      background-color: #e4e4e7 !important;
+      border-color: #d4d4d8 !important;
+    }
+
+    html.light #menuToggle {
+      color: #18181b !important;
+    }
+
+    html.light .mono-card {
+      background-color: #ffffff !important;
+      border-color: #e4e4e7 !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+    }
+
+    html.light .mono-card:hover {
+      border-color: #a1a1aa !important;
+      box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    html.light h1,
+    html.light h2,
+    html.light h3,
+    html.light h4,
+    html.light .text-white {
+      color: #09090b !important;
+    }
+
+    html.light .text-zinc-300 {
+      color: #27272a !important;
+    }
+
+    html.light .text-zinc-400 {
+      color: #52525b !important;
+    }
+
+    html.light .text-zinc-500 {
+      color: #71717a !important;
+    }
+
+    html.light .text-zinc-600 {
+      color: #71717a !important;
+    }
+
+    html.light .section-number {
+      color: #71717a !important;
+    }
+
+    html.light .border-zinc-900,
+    html.light .border-zinc-800,
+    html.light .border-zinc-800\/50 {
+      border-color: #e4e4e7 !important;
+    }
+
+    html.light .border-zinc-700,
+    html.light .border-zinc-600 {
+      border-color: #d4d4d8 !important;
+    }
+
+    html.light .bg-zinc-950\/50,
+    html.light .bg-zinc-950 {
+      background-color: #f8fafc !important;
+    }
+
+    html.light .bg-zinc-900 {
+      background-color: #f1f5f9 !important;
+    }
+
+    html.light .bg-zinc-700 {
+      background-color: #d4d4d8 !important;
+    }
+
+    html.light .timeline-line {
+      background: linear-gradient(to bottom, #09090b, #e4e4e7) !important;
+    }
+
+    html.light .timeline-dot {
+      background: #ffffff !important;
+      border-color: #09090b !important;
+    }
+
+    html.light .bg-zinc-900.border.border-zinc-800\/80 {
+      background-color: #e2e8f0 !important;
+      border-color: #cbd5e1 !important;
+    }
+
+    html.light .skill-bar-fill {
+      background-color: #09090b !important;
+    }
+
+    html.light #hero a[href="#projects"] {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+      border-color: #09090b !important;
+    }
+
+    html.light #hero a[href="#projects"]:hover {
+      background-color: #27272a !important;
+      border-color: #27272a !important;
+    }
+
+    html.light #hero a[href="#kontak"] {
+      background-color: #ffffff !important;
+      color: #18181b !important;
+      border-color: #d4d4d8 !important;
+    }
+
+    html.light #hero a[href="#kontak"]:hover {
+      border-color: #09090b !important;
+      color: #09090b !important;
+    }
+
+    html.light #projects button {
+      background-color: #ffffff !important;
+      color: #18181b !important;
+      border-color: #d4d4d8 !important;
+    }
+
+    html.light #projects button:hover {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+      border-color: #09090b !important;
+    }
+
+    html.light #projects .aspect-video {
+      background-color: #f4f4f5 !important;
+      border-bottom-color: #e4e4e7 !important;
+    }
+
+    html.light #projects .aspect-video span {
+      color: #71717a !important;
+    }
+
+    html.light #projects .p-5 .flex.gap-2 span {
+      background-color: #f4f4f5 !important;
+      border-color: #e4e4e7 !important;
+      color: #52525b !important;
+    }
+
+    html.light #sertifikasi span.font-mono {
+      color: #71717a !important;
+    }
+
+    html.light #kontak {
+      background-color: #f8fafc !important;
+      border-top-color: #e4e4e7 !important;
+    }
+
+    html.light #kontak a {
+      background-color: #ffffff !important;
+      color: #18181b !important;
+      border: 1px solid #e4e4e7 !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    html.light #kontak a:hover {
+      background-color: #f4f4f5 !important;
+      border-color: #d4d4d8 !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    html.light footer {
+      background-color: #fafafa !important;
+      border-top-color: #e4e4e7 !important;
+    }
+
+    html.light footer p {
+      color: #71717a !important;
+    }
+
+    html.light #mobileMenu {
+      background-color: rgba(255, 255, 255, 0.98) !important;
+    }
+
+    html.light .mobile-nav-link {
+      color: #52525b !important;
+    }
+
+    html.light .mobile-nav-link:hover {
+      color: #09090b !important;
+    }
   </style>
 </head>
 
@@ -180,7 +434,7 @@
         </a>
 
         <!-- Desktop Nav -->
-        <div class="hidden md:flex items-center gap-8">
+        <div class="hidden md:flex items-center gap-7">
           <a href="#profil"
             class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Profil</a>
           <a href="#pengalaman"
@@ -193,17 +447,32 @@
             class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Projects</a>
           <a href="#kontak"
             class="nav-link text-zinc-400 hover:text-white text-xs uppercase tracking-widest font-mono transition-colors">Kontak</a>
+
+          <!-- Theme Toggle (Desktop) -->
+          <button id="themeToggle"
+            class="theme-toggle w-8 h-8 rounded-lg border border-zinc-800 bg-zinc-900/40 text-zinc-400 hover:text-white hover:border-zinc-600 flex items-center justify-center transition-all cursor-pointer"
+            aria-label="Ganti Tema" title="Ganti Tema">
+          </button>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button id="menuToggle"
-          class="md:hidden w-10 h-10 flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
-          aria-label="Toggle menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+        <!-- Mobile Header Actions -->
+        <div class="md:hidden flex items-center gap-2">
+          <!-- Theme Toggle (Mobile) -->
+          <button id="themeToggleMobile"
+            class="theme-toggle w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/40 text-zinc-400 flex items-center justify-center transition-all cursor-pointer"
+            aria-label="Ganti Tema" title="Ganti Tema">
+          </button>
+
+          <!-- Mobile Menu Button -->
+          <button id="menuToggle"
+            class="w-9 h-9 rounded-lg border border-zinc-800 bg-zinc-900/40 flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
+            aria-label="Toggle menu">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </nav>
@@ -229,7 +498,7 @@
   <!-- ========== HERO SECTION ========== -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center px-4 pt-16">
     <div class="text-center relative z-10 max-w-4xl mx-auto">
-      <div class="section-number mb-4">// PORTOFOLIO DRAFTER</div>
+      <div class="section-number mb-4">PORTOFOLIO DRAFTER</div>
 
       <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight leading-none mb-6">
         MAHAREZA FIRDAUS
@@ -256,7 +525,7 @@
   <section id="profil" class="py-24 px-4 border-t border-zinc-900">
     <div class="max-w-4xl mx-auto">
       <div class="reveal mb-12">
-        <div class="section-number mb-2">// 01. PROFIL</div>
+        <div class="section-number mb-2">PROFIL</div>
         <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">TENTANG SAYA</h2>
       </div>
 
@@ -279,7 +548,7 @@
   <section id="pengalaman" class="py-24 px-4 border-t border-zinc-900 bg-zinc-950/50">
     <div class="max-w-4xl mx-auto">
       <div class="reveal mb-16">
-        <div class="section-number mb-2">// 02. PENGALAMAN</div>
+        <div class="section-number mb-2">PENGALAMAN</div>
         <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">PENGALAMAN KERJA</h2>
       </div>
 
@@ -416,61 +685,71 @@
   <section id="skills" class="py-24 px-4 border-t border-zinc-900">
     <div class="max-w-4xl mx-auto">
       <div class="reveal mb-12">
-        <div class="section-number mb-2">// 03. SKILLS</div>
+        <div class="section-number mb-2">SKILLS</div>
         <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">KETERAMPILAN</h2>
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
         <!-- Software Skills -->
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 p-6 h-full">
-            <h3 class="text-white font-mono text-sm uppercase tracking-widest mb-6 pb-2 border-b border-zinc-800">
-              Software Skills</h3>
+          <h3 class="text-white font-mono text-xs uppercase tracking-widest mb-4 pb-2 border-b border-zinc-800">Software
+            Skills</h3>
 
-            <div class="grid grid-cols-1 gap-3">
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">AutoCAD</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Pembuatan gambar kerja 2D & detail teknis</p>
-              </div>
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">SketchUp</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Pemodelan 3D arsitektur & eksterior/interior</p>
-              </div>
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">SketchUp LayOut</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Pembuatan gambar kerja 2D dari model 3D SketchUp</p>
-              </div>
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">Microsoft Office</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Dokumentasi data, laporan teknis & administrasi</p>
-              </div>
+          <div class="grid grid-cols-1 gap-4">
+            <!-- AutoCAD -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">AutoCAD</h4>
+              <p class="text-zinc-500 text-xs mt-2">Pembuatan gambar kerja 2D & detail teknis</p>
+            </div>
+
+            <!-- SketchUp -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">SketchUp</h4>
+              <p class="text-zinc-500 text-xs mt-2">Pemodelan 3D arsitektur & eksterior/interior</p>
+            </div>
+
+            <!-- SketchUp LayOut -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">SketchUp LayOut</h4>
+              <p class="text-zinc-500 text-xs mt-2">Pembuatan gambar kerja 2D dari model 3D SketchUp</p>
+            </div>
+
+            <!-- Microsoft Office -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">Microsoft Office</h4>
+              <p class="text-zinc-500 text-xs mt-2">Dokumentasi data, laporan teknis & administrasi</p>
             </div>
           </div>
         </div>
 
         <!-- Soft Skills -->
         <div class="reveal">
-          <div class="mono-card rounded-lg bg-zinc-900/40 p-6 h-full">
-            <h3 class="text-white font-mono text-sm uppercase tracking-widest mb-6 pb-2 border-b border-zinc-800">Soft
-              Skills</h3>
+          <h3 class="text-white font-mono text-xs uppercase tracking-widest mb-4 pb-2 border-b border-zinc-800">Soft
+            Skills</h3>
 
-            <div class="grid grid-cols-1 gap-3">
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">Cepat Belajar</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Adaptasi cepat terhadap sistem dan software baru</p>
-              </div>
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">Adaptif</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Fleksibel di berbagai lingkungan kerja</p>
-              </div>
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">Komunikasi Tim</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Kolaborasi efektif dengan arsitek, engineer & tim teknis</p>
-              </div>
-              <div class="p-3 border border-zinc-800 rounded bg-zinc-900/60">
-                <div class="text-white text-xs font-semibold font-mono">Pengawasan Detail (Quality Control)</div>
-                <p class="text-zinc-500 text-[11px] mt-0.5">Presisi tinggi dalam gambar kerja dan kualitas</p>
-              </div>
+          <div class="grid grid-cols-1 gap-4">
+            <!-- Cepat Belajar -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">Cepat Belajar</h4>
+              <p class="text-zinc-500 text-xs mt-2">Adaptasi cepat terhadap sistem dan software baru</p>
+            </div>
+
+            <!-- Adaptif -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">Adaptif</h4>
+              <p class="text-zinc-500 text-xs mt-2">Fleksibel di berbagai lingkungan kerja</p>
+            </div>
+
+            <!-- Komunikasi Tim -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">Komunikasi Tim</h4>
+              <p class="text-zinc-500 text-xs mt-2">Kolaborasi efektif dengan arsitek, engineer & tim teknis</p>
+            </div>
+
+            <!-- Pengawasan Detail -->
+            <div class="mono-card rounded-lg bg-zinc-900/40 p-5 flex flex-col justify-between">
+              <h4 class="text-white font-medium text-sm">Pengawasan Detail (Quality Control)</h4>
+              <p class="text-zinc-500 text-xs mt-2">Presisi tinggi dalam gambar kerja dan kualitas</p>
             </div>
           </div>
         </div>
@@ -483,7 +762,7 @@
   <section id="sertifikasi" class="py-24 px-4 border-t border-zinc-900 bg-zinc-950/50">
     <div class="max-w-4xl mx-auto">
       <div class="reveal mb-12">
-        <div class="section-number mb-2">// 04. SERTIFIKASI</div>
+        <div class="section-number mb-2">SERTIFIKASI</div>
         <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">SERTIFIKASI & PENGHARGAAN</h2>
       </div>
 
@@ -536,7 +815,7 @@
   <section id="projects" class="py-24 px-4 border-t border-zinc-900">
     <div class="max-w-5xl mx-auto">
       <div class="reveal mb-12">
-        <div class="section-number mb-2">// 05. PROJECTS</div>
+        <div class="section-number mb-2">PROJECTS</div>
         <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">GALERI PROJECT</h2>
       </div>
 
@@ -706,10 +985,11 @@
 
 
   <!-- ========== KONTAK / FOOTER ========== -->
-  <section id="kontak" class="py-24 sm:py-32 px-4 border-t border-zinc-900 bg-zinc-950/50 min-h-[50vh] flex flex-col justify-center">
+  <section id="kontak"
+    class="py-24 sm:py-32 px-4 border-t border-zinc-900 bg-zinc-950/50 min-h-[50vh] flex flex-col justify-center">
     <div class="max-w-4xl mx-auto text-center w-full">
       <div class="reveal mb-10">
-        <div class="section-number mb-2">// 06. KONTAK</div>
+        <div class="section-number mb-2">KONTAK</div>
         <h2 class="text-2xl md:text-4xl font-bold text-white tracking-tight">HUBUNGI SAYA</h2>
       </div>
 
@@ -722,8 +1002,7 @@
           title="Email: maharfrds@gmail.com" aria-label="Email">
           <svg class="w-6 h-6 sm:w-7 sm:h-7 transition-transform group-hover:scale-105" fill="currentColor"
             viewBox="0 0 24 24">
-            <path
-              d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67z" />
+            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67z" />
             <path
               d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908z" />
           </svg>
@@ -890,6 +1169,55 @@
     window.addEventListener('scroll', updateActiveNavLink, { passive: true });
     window.addEventListener('resize', updateActiveNavLink);
     updateActiveNavLink();
+
+    // === Theme Toggle (Gelap / Terang) ===
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeToggleMobileBtn = document.getElementById('themeToggleMobile');
+
+    // Icon Matahari (untuk mode Terang)
+    const sunIconSvg = `<svg class="w-4 h-4 text-amber-500 transition-transform duration-300 hover:rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41m14.14-14.14l-1.41 1.41"></path></svg>`;
+
+    // Icon Bulan Sabit (untuk mode Gelap)
+    const moonIconSvg = `<svg class="w-4 h-4 text-zinc-400 hover:text-white transition-transform duration-300 hover:-rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M21.64 13a1 1 0 00-1.05-.14 8.05 8.05 0 01-3.37.73A8.15 8.15 0 019.08 5.49a8.59 8.59 0 01.25-2A1 1 0 008 2.36a10.14 10.14 0 1014 11.69 1 1 0 00-.36-1.05z" /></svg>`;
+
+    function applyThemeUI(theme) {
+      const isLight = theme === 'light';
+      if (isLight) {
+        document.documentElement.classList.add('light');
+        if (themeToggleBtn) {
+          themeToggleBtn.innerHTML = sunIconSvg;
+          themeToggleBtn.setAttribute('title', 'Tema Terang (Klik untuk Tema Gelap)');
+        }
+        if (themeToggleMobileBtn) {
+          themeToggleMobileBtn.innerHTML = sunIconSvg;
+          themeToggleMobileBtn.setAttribute('title', 'Tema Terang (Klik untuk Tema Gelap)');
+        }
+      } else {
+        document.documentElement.classList.remove('light');
+        if (themeToggleBtn) {
+          themeToggleBtn.innerHTML = moonIconSvg;
+          themeToggleBtn.setAttribute('title', 'Tema Gelap (Klik untuk Tema Terang)');
+        }
+        if (themeToggleMobileBtn) {
+          themeToggleMobileBtn.innerHTML = moonIconSvg;
+          themeToggleMobileBtn.setAttribute('title', 'Tema Gelap (Klik untuk Tema Terang)');
+        }
+      }
+    }
+
+    function toggleTheme() {
+      const isCurrentlyLight = document.documentElement.classList.contains('light');
+      const nextTheme = isCurrentlyLight ? 'dark' : 'light';
+      localStorage.setItem('portfolio-theme', nextTheme);
+      applyThemeUI(nextTheme);
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (themeToggleMobileBtn) themeToggleMobileBtn.addEventListener('click', toggleTheme);
+
+    // Initial theme load
+    const currentTheme = localStorage.getItem('portfolio-theme') || 'dark';
+    applyThemeUI(currentTheme);
   </script>
 
 </body>
